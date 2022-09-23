@@ -29,7 +29,7 @@ export function loadIndexCache(req, res, next) {
             });
         }
         if (data !== null) {
-            console.log('Found data in cache');
+            console.log('Cache hit for index');
             data = JSON.parse(data);
             res.json({
                 size: data.length,
@@ -37,6 +37,7 @@ export function loadIndexCache(req, res, next) {
             });
             return;
         }
+        console.log('Cache miss for index');
         next();
     });
 };
