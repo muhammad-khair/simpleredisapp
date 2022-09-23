@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
-
-require('dotenv').config();
+import dotenv from "dotenv";
+dotenv.config();
 
 if (process.env.MONGODB_URI === undefined) {
     console.error("No MongoDB URI provided");
@@ -51,7 +51,6 @@ let personSchema = mongoose.Schema({
     },
 });
 
-var Person = (module.exports = mongoose.model("person", personSchema));
-module.exports.get = (callback, limit) => {
-    Person.find(callback).limit(limit);
-};
+let Person = mongoose.model("person", personSchema);
+
+export default Person;
