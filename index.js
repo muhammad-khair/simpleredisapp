@@ -21,4 +21,4 @@ app.use("/api", router);
 const port = process.env.PORT || 8080;
 const httpServer = createServer(app);
 httpServer.listen(port);
-console.log(`simpleredisapp listening on port ${port}`);
+console.log(`App simpleredisapp listening on port ${port}`);
