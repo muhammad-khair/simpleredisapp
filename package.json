@@ -1,0 +1,30 @@
+{
+  "name": "simpleredisapp",
+  "version": "1.0.0",
+  "description": "Simple redis caching application",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/muhammad-khair/simpleredisapp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/muhammad-khair/simpleredisapp/issues"
+  },
+  "homepage": "https://github.com/muhammad-khair/simpleredisapp#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.2",
+    "express": "^4.18.1",
+    "mongoose": "^6.6.1",
+    "nodemon": "^2.0.20",
+    "redis": "^4.3.1"
+  }
+}
