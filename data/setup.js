@@ -10,12 +10,19 @@ console.log('Loading mock data');
 let rawdata = fs.readFileSync(`${__dirname}/mock.json`);
 let personDataArray = JSON.parse(rawdata);
 
+console.log('Removing past people in database');
+Person.deleteMany({}, (err) => {
+    if (err) {
+        console.error(err.message);
+    }
+});
+
 console.log(`Saving ${personDataArray.length} people into database`);
 for (var personIdx in personDataArray) {
     await new Person(personDataArray[personIdx])
         .save()
         .catch((err) => {
-            console.log(err.message);
+            console.error(err.message);
         });
 };
 

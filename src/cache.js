@@ -17,10 +17,6 @@ const cacheTimeSeconds = 10;
 export async function saveIndexCache(data) {
     console.log('Saving index to cache');
     await client.setex(dataCacheTag, cacheTimeSeconds, JSON.stringify(data));
-    setTimeout(
-        () => console.log('Removed index from cache'),
-        cacheTimeSeconds * 1000
-    );
 };
 
 export function loadIndexCache(req, res, next) {
