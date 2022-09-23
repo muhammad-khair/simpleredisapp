@@ -12,6 +12,7 @@ npm-debug.log*
 *.gz
 secret.*
 .env
+.instructions
 
 # database
 *.sqlite*
